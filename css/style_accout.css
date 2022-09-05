@@ -1694,7 +1694,7 @@ h1 {
   }
 }
 .content__basket {
-  width: 922px;
+  width: 993px;
   height: 110px;
   position: fixed;
   display: flex;
@@ -1703,7 +1703,7 @@ h1 {
   border: 1px solid #DCDCDC;
   box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
-  bottom: 50px;
+  bottom: 0px;
 }
 
 .basket__selected {
@@ -1730,7 +1730,7 @@ h1 {
 }
 
 .basket__views {
-  margin-right: 145px;
+  margin-right: 252px;
 }
 
 .basket__btn a {
@@ -1753,12 +1753,21 @@ h1 {
   -webkit-transition-timing-function: ease-in-out;
 }
 
-@media (max-width: 1552px) {
-  .content__basket {
-    width: 725px;
-  }
+@media (max-width: 1618px) {
   .basket__views {
-    margin-right: 80px;
+    margin-right: 204px;
+  }
+  .content__basket {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 1552px) {
+  .basket__views {
+    margin-right: 213px;
   }
   .basket__sum,
 .basket__subscribers {
@@ -1766,6 +1775,16 @@ h1 {
   }
   .basket__selected {
     margin-right: 18px;
+  }
+}
+@media (max-width: 1330px) {
+  .content__basket {
+    width: 993px;
+  }
+}
+@media (max-width: 1138px) {
+  .content__basket {
+    width: -webkit-fill-available;
   }
 }
 @media (max-width: 990px) {
@@ -1795,7 +1814,8 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    width: 360px;
+    width: 105%;
+    margin-left: -24px;
   }
   .basket__btn {
     display: flex;
@@ -1816,5 +1836,13 @@ h1 {
   }
   .basket__subtitle {
     margin-bottom: 2px;
+  }
+}
+@media (max-width: 372px) {
+  .content__sell {
+    left: 300px;
+  }
+  .content__basket {
+    margin-left: -28px;
   }
 }

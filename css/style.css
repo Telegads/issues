@@ -501,7 +501,7 @@ body {
 @media (max-width: 1000px) {
   .advantage div {
     width: 250px;
-    min-height: 249px;
+    min-height: 218px;
   }
   .advantage__text {
     margin-left: 60px;
