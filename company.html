@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
-    <link rel="stylesheet" href="css/style_catalog.css">
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="css/style_company.css">
+    <title>Компания</title>
 </head>
 <body>
     <header class="header">
@@ -46,6 +43,7 @@
         </div>
     </header>
     <div class="line"></div>
+    <div class="line_selection"></div>
     <div class="navbar">
         <div class="navbar__menu_mb">
             <div class="menu_mb__title">Меню</div>
@@ -70,7 +68,7 @@
         </div>
         <ul>
             <li class="hover_left_line">
-                <a href="#">
+                <a href="catalog.html">
                     <span class="tooltip_document tooltip">Каталог</span>
                     <svg width="24" height="24" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="hover__img" d="M12.9656 14.4736H5.7456M12.9656 10.2871H5.7456M8.5007 6.1103H5.7457M13.158 1C13.158 1 5.481 1.004 5.469 1.004C2.709 1.021 1 2.837 1 5.607V14.803C1 17.587 2.722 19.41 5.506 19.41C5.506 19.41 13.182 19.407 13.195 19.407C15.955 19.39 17.665 17.573 17.665 14.803V5.607C17.665 2.823 15.942 1 13.158 1Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,7 +76,7 @@
                 </a>
             </li>
             <li class="hover_left_line">
-                <a href="company.html">
+                <a href="#">
                     <span class="tooltip_work tooltip">Мои кампании</span>
                     <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="hover__img" d="M0.8042 13.477C0.8042 13.477 0.9462 15.215 0.9792 15.763C1.0232 16.498 1.3072 17.319 1.7812 17.889C2.4502 18.697 3.2382 18.982 4.2902 18.984C5.5272 18.986 14.5222 18.986 15.7592 18.984C16.8112 18.982 17.5992 18.697 18.2682 17.889C18.7422 17.319 19.0262 16.498 19.0712 15.763C19.1032 15.215 19.2452 13.477 19.2452 13.477M6.4961 3.32949V2.95849C6.4961 1.73849 7.4841 0.750488 8.7041 0.750488H11.2861C12.5051 0.750488 13.4941 1.73849 13.4941 2.95849L13.4951 3.32949M9.9951 14.6782V13.3842M0.75 6.38909V9.85609C2.668 11.1211 4.966 12.0071 7.488 12.3581C7.79 11.2571 8.783 10.4501 9.99 10.4501C11.178 10.4501 12.191 11.2571 12.473 12.3681C15.005 12.0171 17.312 11.1311 19.24 9.85609V6.38909C19.24 4.69509 17.877 3.33109 16.183 3.33109H3.817C2.123 3.33109 0.75 4.69509 0.75 6.38909Z" stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -117,116 +115,31 @@
     <div class="wrapper">
         <div class="line_navbar"></div>
         <div class="wrapper_content">
-            <div class="filter">
-                <form action="#" method="get">
-                    <div class="filter__close">
-                        <img src="img/icons/close.svg" alt="">
-                    </div>
-                    <div class="filter__reset">
-                        <p>Фильтр</p>
-                        <button type="reset">Очистить все</button>
-                    </div>
-                    <div class="filter__search">
-                        <input type="search" placeholder="Поиск">
-                        <button type="submit"><img src="img/icons/search.svg" alt=""></button>
-                    </div>
-                    <div class="filter__select">
-                        <select tabindex="0" name="items">
-                            <option selected value="theme">Все тематики</option>
-                            <option value="subscribers">Подписчики</option>
-                            <option value="views">Просмотры</option>
-                        </select>
-                    </div>    
-                </form>
-                <div class="filter__format_title filter__title">
-                    <p>Формат</p>
-                    <img class="close_title" src="img/icons/arrow.svg" alt="">
+            <div class="content">
+                <div class="content__chanell_selection">
+                    <p>1 / 4</p>
+                    <p>Выбор каналов</p>
                 </div>
-                <div class="filter__format_wrapper">
-                    <p>Формат размещения:</p>
-                    <div class="filter__format_items">
-                        <div class="filter__format_item active">1/24</div>
-                        <div class="filter__format_item2">2/48</div>
-                        <div class="filter__format_item3">3/72</div>
-                        <div class="filter__format_item4">Eternal</div>
-                        <div class="filter__format_item5">Forwards</div>
-                    </div>
-                </div>
-                <div class="filter__range_title filter__title">
-                    <p>Диапазоны</p>
-                    <img class="close_range_title" src="img/icons/arrow.svg" alt="">
-                </div>
-                <div class="filter__slider_range">
-                    <div class="filter__range_er">er %</div>
-                    <div class="slider_range-container-er">
-                        <input type="text" class="slider_range-input-er-left" />
-                        <input type="text" class="slider_range-input-er-right "/>
-                        <div class="slider_range-er"></div>
-                    </div>
-                    <div class="filter__range_subscribers">Подписчиков</div>
-                    <div class="slider_range-container-subscribers">
-                        <input type="text" class="slider_range-input-subscribers-left" />
-                        <input type="text" class="slider_range-input-subscribers-right "/>
-                        <div class="slider_range-subscribers"></div>
-                    </div>
-                </div>
-                <div class="filter__format2_title filter__title">
-                    <p>Формат</p>
-                    <img class="close_title_format2" src="img/icons/arrow.svg" alt="">
-                </div>
-                <div class="filter__artical_blog">
-                    <div class="item__articl">
-                        <div>Статьи</div>
-                        <div class="item__articl_btn">
-                            <input type="checkbox" role="switch">
+                <div class="content__display_no">
+                    <div class="content__wrapper">
+                        <div class="content__header">
+                            <div class="content__header_form_draft">
+                                <form action="">
+                                    <input id="company" type="company" id="company" name="name" readonly value="Кампания 56546">
+                                    <img src="" alt="">
+                                </form>
+                                <img class="edit_btn" src="img/icons/edit.svg" alt="">
+                                <div class="content__header_draft">
+                                    <a href="#"><p>Черновик</p></a>
+                                </div>
+                            </div>
+                            <div class="content__header_add_channel content__header_add_channel_ds">
+                                <a href=""><p> Добавить каналы</p><img src="img/icons/plus.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="item__blog">
-                        <div>Блог</div>
-                        <div class="item__blog_btn">
-                            <input type="checkbox" role="switch">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="line_filter"></div>
-        <div class="content">
-            <div class="content__mob_filter">
-                <div>Фильтр</div>
-                <img src="img/icons/filter.svg" alt="">
-            </div>
-            <div class="content__display_no">
-                <div class="content__wrapper">
-                    <div class="content__header">
-                        <h1>Каталог Telegram-каналов</h1>
-                        <div class="content_channels">
-                            <p class="content_channels_text">Каналы:</p>
-                            <p class="content_channels_number">4 101</p>
-                        </div>
-                    </div>
-                    <div class="content__filters">
-                        <div class="filter_item">
-                            <div class="filter__views">Просмотры</div>
-                        </div>
-                        <div class="filter_item filter__rating">
-                            <div>Рейтинг</div>
-                        </div>
-                        <div class="filter_item filter__er">
-                            <div>ER</div>
-                        </div>
-                        <div class="filter_item filter__subscribers">
-                            <div>Подписчики</div>
-                        </div>
-                        <div class="filter_item filter__price">
-                            <div>Стоимость</div>
-                        </div>
-                        <div class="filter_item filter__add">
-                            <div>Добавлен</div>
-                        </div>
-                        <div class="filter_item filter__cpv">
-                            <div>CPV</div>
-                        </div>
+                    <div class="content__header_add_channel content__header_add_channel_mb">
+                        <a href=""><p> Добавить каналы</p><img src="img/icons/plus.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="content__card_topor">
@@ -309,19 +222,7 @@
                             <div class="card__buy">
                                 <div class="card__buy_hover">
                                     <a href="#">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_205_831)">
-                                            <path class="buy__hover" fill-rule="evenodd" clip-rule="evenodd" d="M7.4222 19.8203C7.8442 19.8203 8.1872 20.1633 8.1872 20.5853C8.1872 21.0073 7.8442 21.3493 7.4222 21.3493C7.0002 21.3493 6.6582 21.0073 6.6582 20.5853C6.6582 20.1633 7.0002 19.8203 7.4222 19.8203Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path class="buy__hover" fill-rule="evenodd" clip-rule="evenodd" d="M18.6752 19.8203C19.0972 19.8203 19.4402 20.1633 19.4402 20.5853C19.4402 21.0073 19.0972 21.3493 18.6752 21.3493C18.2532 21.3493 17.9102 21.0073 17.9102 20.5853C17.9102 20.1633 18.2532 19.8203 18.6752 19.8203Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path class="buy__hover" d="M2.75 3.25L4.83 3.61L5.793 15.083C5.871 16.018 6.652 16.736 7.59 16.736H18.502C19.398 16.736 20.158 16.078 20.287 15.19L21.236 8.632C21.353 7.823 20.726 7.099 19.909 7.099H5.164" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path class="buy__hover" d="M14.126 10.7949H16.899" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_205_831">
-                                            <rect width="24" height="24" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
+                                        <img src="img/icons/plus_red.svg" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -408,50 +309,103 @@
                             <div class="card__buy">
                                 <div class="card__buy_hover">
                                     <a href="#">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_205_831)">
-                                            <path class="buy__hover" fill-rule="evenodd" clip-rule="evenodd" d="M7.4222 19.8203C7.8442 19.8203 8.1872 20.1633 8.1872 20.5853C8.1872 21.0073 7.8442 21.3493 7.4222 21.3493C7.0002 21.3493 6.6582 21.0073 6.6582 20.5853C6.6582 20.1633 7.0002 19.8203 7.4222 19.8203Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path class="buy__hover" fill-rule="evenodd" clip-rule="evenodd" d="M18.6752 19.8203C19.0972 19.8203 19.4402 20.1633 19.4402 20.5853C19.4402 21.0073 19.0972 21.3493 18.6752 21.3493C18.2532 21.3493 17.9102 21.0073 17.9102 20.5853C17.9102 20.1633 18.2532 19.8203 18.6752 19.8203Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path class="buy__hover" d="M2.75 3.25L4.83 3.61L5.793 15.083C5.871 16.018 6.652 16.736 7.59 16.736H18.502C19.398 16.736 20.158 16.078 20.287 15.19L21.236 8.632C21.353 7.823 20.726 7.099 19.909 7.099H5.164" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path class="buy__hover" d="M14.126 10.7949H16.899" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_205_831">
-                                            <rect width="24" height="24" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
+                                        <img src="img/icons/plus_red.svg" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="wrapper_filter_mobile">
+                <div class="filter">
+                    <div class="filter__items">
+                        <div class="item__channel">
+                            <p class="item__text">Каналы</p>
+                            <p class="item__number">3</p>
+                        </div>
+                        <div class="item__placing">
+                            <p class="item__text">Размещения</p>
+                            <p class="item__number">4</p>
+                        </div>
+                        <div class="item__subscribers">
+                            <p class="item__text">Подписчики</p>
+                            <p class="item__number">62 000</p>
+                        </div>
+                        <div class="item__views">
+                            <p class="item__text">Просмотры</p>
+                            <p class="item__number">8К</p>
+                        </div>
+                    </div>
+                    <div class="filter__line"></div>
+                    <div class="filter__form">
+                        <div class="form__sum">
+                            <p>Сумма</p>
+                            <p>13 400</p>
+                        </div>
+                        <div class="form__promo">
+                            <p>Промокод</p>
+                            <div class="promo__btn">
+                                <input type="checkbox" role="switch">
+                            </div>
+                        </div>
+                        <form action="#">
+                            <input type="text" id="promo" name="promo" placeholder="Введите промокод">
+                            <input type="next" value="Продолжить" readonly>
+                        </form>
+                        <div class="form__defense">
+                            <img src="img/icons/defense.svg" alt="">
+                            <p>Заказ защищен безопасной сделкой</p>
+                        </div>
                     </div>
                 </div>
-                <div class="content__basket">
-                    <div class="basket__selected">
-                        <p class="basket__subtitle">Выбран:</p>
-                        <p class="basket__number">1 канал</p>
+            </div>
+        </div>
+        <div class="wrapper_filter">
+            <div class="line_filter"></div>
+            <div class="filter">
+                <div class="filter__items">
+                    <div class="item__channel">
+                        <p class="item__text">Каналы</p>
+                        <p class="item__number">3</p>
                     </div>
-                    <div class="basket__sum">
-                        <p class="basket__subtitle">На сумму:</p>
-                        <p class="basket__number">1 440р</p>
+                    <div class="item__placing">
+                        <p class="item__text">Размещения</p>
+                        <p class="item__number">4</p>
                     </div>
-                    <div class="basket__subscribers">
-                        <p class="basket__subtitle">Подписчики:</p>
-                        <p class="basket__number">30 000</p>
+                    <div class="item__subscribers">
+                        <p class="item__text">Подписчики</p>
+                        <p class="item__number">62 000</p>
                     </div>
-                    <div class="basket__views">
-                        <p class="basket__subtitle">Просмотры:</p>
-                        <p class="basket__number">10к</p>
+                    <div class="item__views">
+                        <p class="item__text">Просмотры</p>
+                        <p class="item__number">8К</p>
                     </div>
-                    <div class="basket__btn">
-                        <a href="#">Перейти в корзину</a>
+                </div>
+                <div class="filter__line"></div>
+                <div class="filter__form">
+                    <div class="form__sum">
+                        <p>Сумма</p>
+                        <p>13 400</p>
+                    </div>
+                    <div class="form__promo">
+                        <p>Промокод</p>
+                        <div class="promo__btn promo__btn_ds">
+                            <input type="checkbox" role="switch">
+                        </div>
+                    </div>
+                    <form action="#">
+                        <input class="promo__text" type="text" id="promo" name="promo" placeholder="Введите промокод">
+                        <input type="next" value="Продолжить" readonly>
+                    </form>
+                    <div class="form__defense">
+                        <img src="img/icons/defense.svg" alt="">
+                        <p>Заказ защищен безопасной сделкой</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/script_catalog.js"></script>
+    <script src="js/script_company.js"></script>
 </body>
 </html>
